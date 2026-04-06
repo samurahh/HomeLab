@@ -1,6 +1,8 @@
 services:
   hasmo-car:
-    build: .
+    image: ghcr.io/samurahh/hasmo-car:latest
+    # To build locally instead, comment out 'image' and uncomment 'build':
+    # build: .
     container_name: hasmo-car
     ports:
       - "3001:3001"
