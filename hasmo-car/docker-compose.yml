@@ -1,0 +1,15 @@
+services:
+  hasmo-car:
+    build: .
+    container_name: hasmo-car
+    ports:
+      - "3001:3001"
+    volumes:
+      - hasmo-data:/app/data
+    environment:
+      - PORT=3001
+      - DATA_DIR=/app/data
+    restart: unless-stopped
+
+volumes:
+  hasmo-data:
